@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FriendlyCalendar</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" sizes="16x16 32x32 48x48" type="image/png" href="assets/img/FriendlyCalendarLogo.png" />
+</head>
+
+<body>
+
+<header>
+    
+    <img class="crazy-logo" src="assets/img/FriendlyCalendarLogo.png" alt="CalendarLogo" width="130vw">    
+    <h1 class="title1">Friendly Calendar</h1>
+     <nav class="navmenu">   
+       <li><a class="menu" href="./Index.html">Home</a></li>
+       <li><a class="menu" href="#calendario">Calendario</a></li>
+       <li><a class="menu" href="./index.html#fundadores">Fundadores</a></li>
+       <li><a class="menu" href="#precios">Suscríbete</a></li>
+       <li><a class="menu" href="#contacto">Contacto</a></li>
+       <li><a class="menu" href="#login">Login</a></li>
+     </nav>  
+     
+     <div class="dropdown">
+        <button class="dropbtn"><i class="fa-solid fa-square-caret-down fa-xl"></i></button>
+        <div class="dropdown-content">
+        <a href="./Index.html">Home</a>
+        <a href="#calendario">Calendario</a>
+        <a href="#fundadores">Fundadores</a>
+        <a href="#chat">Chat</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#login">Login</a>
+        </div>
+      </div>
+
+</header>
+
+<main class="main">
+
+ 
+
+ <div class="grid-content2">
+  <div class="item-5">
+     <div class="title">
+        <h1>Precios</h1>
+        <br>
+     </div>
+     <div class="content-card2" id="precios">
+        <div class="card2-1">
+         <a href=""><h2>Standard</h2></a>
+           <p>Para quienes están dando sus primeros pasos con la programación básica</p>
+           <h3>Siempre Gratis</h3>
+         </div>
+        <div class="card2-2">
+         <a href=""><h2>Team</h2></a>
+           <p>Para equipos pequeños o individuos con necesidades de programación más sofisticadas</p>
+           <h3>$10 / mes</h3>
+         </div>
+        <div class="card2-3">
+         <a href=""><h2>Enterprise</h2></a>
+           <p>Para los equipos que necesitan funciones avanzadas, como informes, distribución de reuniones y automatizaciones</p>
+           <h3>$16 / mes</h3>
+         </div>
+     </div>
+  </div>
+ 
+    
+ 
+
+  <div class="item-6" id="suscribete">
+   <form action="/action_page.php" id="form">
+    <div class="form-group" id="group-nombre"> 
+      <label for="nombre" >Nombre</label>
+      <div class="form-group-input">
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre.."  class="form-input">
+      <i class=" status-validation-form fa-solid fa-circle-xmark"></i>
+    </div>
+    <p class="input-error-form">El nombre solo puede contener letras.</p>
+    </div>
+
+    <div class="form-group" id="group-apellido"> 
+      <label for="apellido">Apellido</label>
+      <div class="form-group-input">
+      <input type="text" id="apellido" name="apellido" placeholder="Tu Apellido.." class="form-input">
+      <i class=" status-validation-form fa-solid fa-circle-xmark"></i>
+    </div>
+    <p class="input-error-form">El apellido solo puede contener letras.</p>
+    </div>
+          
+      
+    <div class="form-group" id="group-email"> 
+      <label for="email">E-mail</label>
+      <div class="form-group-input">
+      <input type="email" id="email" name="email" placeholder="name@example.com" class="form-input">
+      <i class=" status-validation-form fa-solid fa-circle-xmark"></i>
+    </div>
+    <p class="input-error-form">El E-mail solo puede contener letras, números, puntos, guiones  y guión bajo.</p>
+    </div>
+    
+
+    <div class="form-group" id="group-cantidad"> 
+      <label for="cantidad">Cantidad</label>
+      <div class="form-group-input">
+      <input type="number" id="cantidad" name="cantidad" value="1" class="form-input" required>
+      <i class=" status-validation-form fa-solid fa-circle-xmark"></i>
+    </div>
+    <p class="input-error-form">Complete la cantidad. Máximo: 5 suscripciones por compra.</p>
+    </div>
+
+
+      <label for="categoria">Categoría</label>
+      <select id="categoria" name="categoria" class="form-input">
+        <option value="standard">Standard</option>
+        <option value="team">Team</option>
+        <option value="enterprise">Enterprise</option>
+       </select>
+    
+       <!-- <div class="form-group  " id="group-descuento">   
+      <label for="descuento">Código de Descuento:</label>
+      <div class="form-group-input ">
+      <input type="text" id="descuento" name="descuento" placeholder="Ingresá Tu Código de Descuento" class="form-input">
+      <i class=" status-validation-form fa-solid fa-circle-xmark "></i>
+    </div>
+    <p class="input-error-form">Ingrese un Código de Descuento válido.</p>
+    </div> -->
+
+
+
+
+      <br>
+      <br>
+      <div class="totalApagar">Total a Pagar: 
+        <span id="totalPagar"></span> 
+      </div>
+      <br>
+
+           <!--términos y condiciones-->   
+     <div class="form-group-terms" id="group-terminos">
+      <label class="form-label">
+        <input type="checkbox" class="checkbox-form" name="terminos" id="terminos" >
+        Acepto los términos y condiciones
+      </label>
+     </div>
+       
+    <div class="form-message" id="form-message">
+      <p ><i class="fa-solid fa-triangle-exclamation"></i><b>Error:</b> Por favor ingrese todos los campos requeridos.</p>
+    </div>
+       
+    <div class="form-group form-group-btn-send" id="calcular">
+      <button type="button" class="form-btn" id="btnResumen">Calcular</button>
+      <p class="success-message-form2" id="success-message-form2">Total a pagar calculado exitosamente! 
+        Dirígase a la Plataforma de pagos haciendo click <a href="">Aquí</a>
+      </p>
+    </div>
+    <br>
+    <div class="form-group form-group-btn-send" id="">
+      <button type="submit" class="form-btn" id="btnEnviar">Enviar</button>
+      <p class="success-message-form" id="success-message-form">Formulario enviado exitósamente!
+      </p>
+    </div>
+    <br>
+    <!-- <div class="form-group form-group-btn-send" id=""> -->
+      <button type="reset" class="form-btn" id="btnBorrar">Reset</button>
+      <!-- </div> -->
+      
+      
+    </form>
+  </div>
+</div>
+
+
+
+
+
+</main>
+<footer >
+   <div class="left1">
+    <div class="dropdown1">
+        <button class="dropbtn1"><i class="fa-solid fa-globe fa-xl"></i></button>
+        <div class="dropdown-content1">
+        <a href="#">Español</a>
+        <a href="#">English</a>
+        <a href="#">Français</a>
+        <a href="#">Deutsch</a>
+        <a href="#">Português</a>
+        </div>
+      </div>
+    <div><p>Copyright Friendly Calendar 2023</p></div>
+    </div>
+    
+    <div class="central1">
+        <a class="menu" href="#políticaDePrivacidad">Política de Privacidad</a>
+        <a class="menu" href="#terminosYcondiciones">Términos y Condiciones</a>
+        <a class="menu" href="#status">Status</a>
+        <a class="menu" href="#seguridad">Seguridad</a>
+        <a class="menu" href="#configuraciónDeCockies">Configuración de Cockies</a>
+        <a class="menu" href="#elecciónDePrivacidad">Elección de Privacidad</a>
+            
+    </div>
+
+    <div class="right1">
+        <a class="menu" href="https://twitter.com/?lang=es"><i class="fa-brands fa-twitter fa-xl"></i></a>
+        <a class="menu" href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-xl"></i></a>
+        <a class="menu" href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-xl"></i></a>
+        <a class="menu" href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+        <a class="menu" href="https://www.youtube.com/"><i class="fa-brands fa-youtube fa-xl"></i></a>
+
+    </div>
+    
+    
+
+   
+</footer>    
+
+<script src="js/main.js"></script>
+<script src="https://kit.fontawesome.com/8d8a26f7cd.js" crossorigin="anonymous"></script>
+</body>
+</html>
